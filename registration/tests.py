@@ -8,5 +8,5 @@ class ProfileTestCase(TestCase):
         User.objects.create_user('test', 'test@test.com', 'test1234')
 
     def test_profile_exists(self):
-        exist = Profile.objects.filter(user__username='test').exists()
+        exists = Profile.objects.filter(user__username='test').exists()
         self.assertEqual(exists, True)
